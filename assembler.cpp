@@ -547,7 +547,9 @@ void assembleNewProgram()
     {
         cout << "\n\t\tSOURCE FILE DOESN'T EXISTS\n\n";
         if (!OS_Windows)
+        {
             system("sleep 3");
+        }
         else
         {
             system("timeout 3");
@@ -556,7 +558,9 @@ void assembleNewProgram()
     }
     Assembler newProgram(src, optab, symtab, object, listing);
     if (!OS_Windows)
+    {
         system("clear");
+    }
     else
     {
         system("cls");
